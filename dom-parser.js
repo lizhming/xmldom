@@ -12,7 +12,7 @@ DOMParser.prototype.parseFromString = function(source,mimeType){
 	var defaultNSMap = options.xmlns||{};
 	var isHTML = /\/x?html?(\+xml)?$/.test(mimeType);//mimeType.toLowerCase().indexOf('html') > -1;
   	var entityMap = isHTML?htmlEntity.entityMap:{'lt':'<','gt':'>','amp':'&','quot':'"','apos':"'",
-			'shy': '-','mdash': '-','ndash': '-'};
+			'shy': '-','mdash': '-','ndash': '-', 'nbsp': ' '};
 	if(locator){
 		domBuilder.setDocumentLocator(locator)
 	}
